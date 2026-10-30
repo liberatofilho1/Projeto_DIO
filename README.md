@@ -9,14 +9,11 @@
 
 ## 📌 Descrição do Projeto
 Este projeto foi desenvolvido como parte do desafio prático da plataforma **DIO (Digital Innovation One)**. O objetivo principal é realizar auditoria de segurança e simulação de ataques de Força Bruta (*Brute Force*) e *Password Spraying* utilizando a ferramenta **Medusa** no ambiente controlado do **Kali Linux**, tendo como alvo a aplicação vulnerável **Metasploitable 2**.
-
----
-
-## 🏗️ Topologia do Ambiente de Testes
+______________________
 O laboratório foi montado utilizando o **Oracle VirtualBox** em uma rede isolada do tipo *Host-Only*:
 
-- **Atacante:** Kali Linux (IP: `192.168.56.101`)
-- **Alvo:** Metasploitable 2 (IP: `192.168.56.102`)
+- **Atacante:** Kali Linux (IP: `192.168.56.102`)
+- **Alvo:** Metasploitable 2 (IP: `192.168.56.101`)
 - **Rede:** Host-Only Adapter (`192.168.56.0/24`)
 
 ---
